@@ -1,11 +1,11 @@
 ````markdown
-# Minesweeper with Knowledge-Based AI
+#Minesweeper with Knowledge-Based AI
 
 A classic Minesweeper game implemented in Python with Pygame, featuring an intelligent AI agent that uses knowledge representation and first-order logic to play the game strategically.
 
 ---
 
-## Table of Contents
+##Table of Contents
 
 - [Overview](#overview)  
 - [Features](#features)  
