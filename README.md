@@ -1,116 +1,101 @@
-# Minesweeper with Knowledge-Based AI
+# Minesweeper AI 🤖💎
 
-A classic Minesweeper game implemented in Python with Pygame, featuring an intelligent AI agent that uses knowledge representation and first-order logic to play the game strategically.
+![Minesweeper](https://img.shields.io/badge/Minesweeper-Python-blue?style=for-the-badge&logo=python) ![Pygame](https://img.shields.io/badge/Pygame-Game%20Development-red?style=for-the-badge&logo=pygame)
 
----
+Welcome to the Minesweeper AI project! This repository contains a classic Minesweeper game built in Python using Pygame. It features an AI agent that employs knowledge representation and first-order logic to make strategic moves. Whether you're a gamer, a developer, or an AI enthusiast, this project offers a unique blend of fun and learning.
 
 ## Table of Contents
 
-* [Overview](#overview)
-* [Features](#features)
-* [AI Agent](#ai-agent)
-* [Installation](#installation)
-* [Usage](#usage)
-* [Controls](#controls)
-* [Project Structure](#project-structure)
-
----
-
-## Overview
-
-This Minesweeper implementation delivers a smooth gameplay experience with an interactive graphical interface. The standout feature is the AI agent, which leverages formal logic and knowledge-based reasoning to deduce safe moves and flag mines, reducing guesswork typically involved in the game.
-
-Built with Python and Pygame, the project serves as both an engaging game and an educational tool demonstrating core AI concepts such as inference, knowledge representation, and reasoning under uncertainty.
-
----
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [AI Agent](#ai-agent)
+- [Game Rules](#game-rules)
+- [Contributing](#contributing)
+- [License](#license)
+- [Releases](#releases)
 
 ## Features
 
-* **Classic Minesweeper Gameplay:** 8x8 grid with 8 hidden mines.
-* **Interactive Interface:** Click cells to reveal or flag them; clear visual indicators for mines, flags, and numbers.
-* **Knowledge-Based AI Agent:**
-
-  * Uses **first-order logic** and a **dynamic knowledge base** to infer safe cells and mines.
-  * Makes moves based on logical deduction rather than blind guessing.
-  * Falls back on probabilistic/random moves only when no safe move can be inferred.
-* **Game States:** Real-time feedback on win/loss.
-* **User-Friendly UI:** Instructions screen, reset and AI move buttons.
-
----
-
-## AI Agent
-
-The AI agent is designed around **knowledge-based reasoning** principles, applying:
-
-* **Knowledge Representation:** Maintaining a set of logical statements describing which cells are safe or contain mines.
-* **Inference via First-Order Logic:** Using revealed information and game rules to deduce the status of unrevealed cells.
-* **Dynamic Learning:** Continuously updates its knowledge base after each move to refine its understanding of the board.
-* **Decision-Making:** Chooses moves that are guaranteed safe whenever possible, dramatically reducing risk and guesswork.
-* **Fallback Strategy:** When logical inference fails to find safe moves, it intelligently makes random moves to progress the game.
-
-This AI approach showcases fundamental concepts in artificial intelligence and demonstrates how logic and knowledge can be applied to complex decision-making problems.
-
----
+- **Classic Gameplay**: Enjoy the traditional Minesweeper experience.
+- **AI Integration**: An intelligent agent that uses first-order logic for decision-making.
+- **Interactive UI**: A user-friendly interface built with Pygame.
+- **Customizable Settings**: Adjust difficulty levels and game settings.
+- **Open Source**: Contribute to the project and improve the AI.
 
 ## Installation
 
-1. Clone the repository:
+To get started with the Minesweeper AI, follow these steps:
+
+1. **Clone the Repository**:
 
    ```bash
-   git clone https://github.com/yourusername/minesweeper.git
+   git clone https://github.com/rathu2306/minesweeper.git
    cd minesweeper
    ```
-2. Create a virtual environment (optional but recommended):
+
+2. **Install Dependencies**:
+
+   Make sure you have Python and Pygame installed. You can install Pygame using pip:
 
    ```bash
-   python -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   pip install pygame
    ```
-3. Install dependencies:
+
+3. **Run the Game**:
+
+   Execute the game with the following command:
 
    ```bash
-   pip install -r requirements.txt
+   python minesweeper.py
    ```
-
----
 
 ## Usage
 
-Run the game with:
+After running the game, you will see the Minesweeper grid. Click on the cells to reveal them. The AI agent will make moves based on its knowledge base and inference rules. You can watch it strategize and uncover the mines.
 
-```bash
-python runner.py
-```
+## AI Agent
 
-The window will open showing instructions first. Click **Play Game** to start.
+The AI agent in this project utilizes knowledge representation and first-order logic to analyze the game state. Here’s how it works:
 
----
+- **Knowledge Base**: The agent maintains a knowledge base that stores information about revealed cells, potential mine locations, and safe moves.
+- **Inference Engine**: The agent applies inference rules to deduce new information from its knowledge base.
+- **Decision Making**: The agent chooses moves based on the safest options available, minimizing the risk of hitting a mine.
 
-## Controls
+### How the AI Works
 
-* **Left-click**: Reveal a cell.
-* **Right-click**: Flag or unflag a cell as a mine.
-* **AI Move button**: Let the AI make a move based on its reasoning.
-* **Reset button**: Restart the game.
+1. **Initial State**: The agent starts with no information and updates its knowledge base as cells are revealed.
+2. **Inference**: It uses logical reasoning to make deductions about the location of mines.
+3. **Move Selection**: The agent selects the next cell to reveal based on its analysis.
 
----
+## Game Rules
 
-## Project Structure
+The rules of Minesweeper are simple yet challenging:
 
-```
-minesweeper/
-├── assets/
-│   ├── fonts/
-│   │   └── OpenSans-Regular.ttf
-│   └── images/
-│       ├── flag.png
-│       └── mine.png
-├── minesweeper.py         # Game logic and AI agent implementation
-├── runner.py              # Pygame interface and main game loop
-├── requirements.txt       # Dependencies
-└── README.md              # This file
-```
+- The objective is to clear a grid without hitting mines.
+- Clicking on a cell reveals either a number (indicating adjacent mines) or a mine (resulting in game over).
+- The player can flag cells they suspect contain mines.
 
----
+## Contributing
 
+We welcome contributions! If you want to improve the game or the AI, follow these steps:
 
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Make your changes and commit them.
+4. Push your changes and create a pull request.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Releases
+
+You can find the latest releases of the Minesweeper AI [here](https://github.com/rathu2306/minesweeper/releases). Download the necessary files and execute them to enjoy the game.
+
+## Acknowledgments
+
+- **Pygame**: For providing the framework to create the game.
+- **AI Community**: For inspiring the development of the AI agent.
+
+Feel free to explore, contribute, and have fun with the Minesweeper AI!
